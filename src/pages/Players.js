@@ -11,7 +11,7 @@ const Players = () => {
   useEffect(() => {
     const fetchData = async () => {
       let response = await Axios.get(
-        `http://localhost:5000/api/players?limit=${
+        `https://floating-spire-13550.herokuapp.com/api/players?limit=${
           page * 5
         }&${sort}&name[regex]=${search}`
       );
