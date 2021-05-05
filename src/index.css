@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.5s;
+}
+
+.header {
+  background-color: rgb(28, 28, 100);
+  width: 100%;
+  height: 55px;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  font-weight: 700;
+  font-family: cursive;
+  border-left: 5px solid red;
+  padding-left: 3px;
+  cursor: pointer;
+}
+.trophy {
+  font-size: 20px;
+  color: yellow;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.trophy:hover {
+  opacity: 1;
+}
+/* playerList */
+.playerList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+/* info */
+.info {
+  width: 152px;
+  height: 380px;
+  border: 1px solid rgb(80, 134, 92);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.info img {
+  width: 135px;
+  height: 155px;
+  margin: 7px;
+}
+.name-country {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.namecountry {
+  font-size: 14px;
+  padding: 5px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.teampaid {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.teampaid1 {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(10, 10, 29);
+  color: white;
+  padding: 2px 5px 2px 5px;
+  border-radius: 3px;
+}
+button {
+  cursor: pointer;
+  font-size: 16px;
+  font-family: cursive;
+  font-weight: 600;
+  color: white;
+  margin: 25px;
+  background-color: rgb(0, 105, 0);
+  border: none;
+  outline: none;
+  padding: 7px 20px 7px 20px;
+}
+button:hover {
+  background-color: rgb(17, 39, 17);
+}
+.logoprice {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* teamlogo */
+.ipl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.ipl img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+/* playerProfiles */
+.playerProfiles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+input {
+  margin: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  font-family: cursive;
+}
+input[type="text"] {
+  background-color: rgb(17, 13, 17);
+  color: rgb(151, 255, 224);
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+select {
+  border: 2px solid skyblue;
+  padding: 7px;
+  width: 85%;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+select option {
+  border-radius: 5px;
+}
