@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import Loading from './Loading'
 
 const Players = () => {
   const [players, setPlayers] = useState([]);
@@ -7,9 +8,10 @@ const Players = () => {
   const [sort, setSort] = useState("");
   const [result, setResult] = useState(0);
   const [search, setSearch] = useState("");
-
+  const [loading,setLoading]=useState(false)
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true)
       let response = await Axios.get(
         `https://floating-spire-13550.herokuapp.com/api/players?limit=${
           page * 5
@@ -17,6 +19,7 @@ const Players = () => {
       );
       let data = await response.data;
       console.log(data.data);
+      setLoading(false)
       setPlayers(data.data);
       let results = await response.data.results;
       setResult(results);
@@ -30,7 +33,10 @@ const Players = () => {
   };
 
   return (
-    <div className="playerProfiles">
+    <>
+      {
+        loading ? <Loading /> : (
+          <div className="playerProfiles">
       <div className="fields">
         <input
           className="inputfield"
@@ -85,7 +91,10 @@ const Players = () => {
           <button onClick={() => setPage(page + 1)}>Load More</button>
         )}
       </div>
-    </div>
+      </div>
+        )
+    }
+      </>
   );
 };
 
